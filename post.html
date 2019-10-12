@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Dataset - JungLab</title>
+    <title>Blog Post - JungLab</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -28,6 +28,7 @@
   </head>
 
   <body>
+    <div class="simple-slider"></div>
     <nav
       class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
     >
@@ -56,7 +57,7 @@
               <a class="nav-link" href="publications.html">publications</a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link active" href="dataset.html">Dataset</a>
+              <a class="nav-link" href="dataset.html">Dataset</a>
             </li>
             <li class="nav-item" role="presentation">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -65,14 +66,40 @@
         </div>
       </div>
     </nav>
-    <main class="page">
-      <section class="clean-block about-us">
+    <main class="page blog-post">
+      <section class="clean-block clean-post dark">
         <div class="container">
-          <div class="block-heading">
-            <h2 class="text-info">Dataset</h2>
-            <p>Meet our fabulous dataset!</p>
+          <div class="carousel slide" data-ride="carousel" id="carousel-1">
+            <div class="carousel-inner" role="listbox" id="post-images"></div>
+            <div>
+              <a
+                class="carousel-control-prev"
+                href="#carousel-1"
+                role="button"
+                data-slide="prev"
+                ><span class="carousel-control-prev-icon"></span
+                ><span class="sr-only">Previous</span></a
+              ><a
+                class="carousel-control-next"
+                href="#carousel-1"
+                role="button"
+                data-slide="next"
+                ><span class="carousel-control-next-icon"></span
+                ><span class="sr-only">Next</span></a
+              >
+            </div>
+            <ol class="carousel-indicators" id="post-indicator"></ol>
           </div>
-          <div class="row" id="dataset"></div>
+          <div class="block-content">
+            <div class="post-body">
+              <h3 id="post-title"></h3>
+              <div class="post-info">
+                <span id="post-author"></span><span id="post-date"></span>
+              </div>
+              <p id="post-content"></p>
+              <figure class="figure"></figure>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -120,7 +147,7 @@
 
     <script src="dobby.js"></script>
     <script>
-      updateDataset();
+      updatePost();
     </script>
   </body>
 </html>
