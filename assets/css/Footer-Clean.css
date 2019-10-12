@@ -131,6 +131,7 @@ img, svg {
 .team-photo {
   width: 160px;
   /*max-width: 160px;*/
+  margin-bottom: 20px;
 }
 
 .team-name {
@@ -175,5 +176,13 @@ img, svg {
 
 .section-light {
   background-color: #fff;
+}
+
+col-12 {
+  margin-bottom: 20px;
+}
+
+.col-12 {
+  text-align: center;
 }
 
