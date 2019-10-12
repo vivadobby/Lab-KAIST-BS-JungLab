@@ -33,7 +33,7 @@
   text-align: right;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .footer-clean .item {
     text-align: center;
     padding-bottom: 20px;
@@ -65,13 +65,13 @@
   opacity: 0.9;
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .footer-clean .item.social > a {
     margin-top: 40px;
   }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .footer-clean .item.social > a {
     margin-top: 10px;
   }
@@ -125,7 +125,8 @@
   margin-top: 2rem;
 }
 
-img, svg {
+img,
+svg {
 }
 
 .team-photo {
@@ -188,3 +189,6 @@ col-12 {
   }
 }
 
+.col-dataset {
+  margin-bottom: 1em;
+}
