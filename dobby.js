@@ -129,7 +129,16 @@ let updatePost = () => {
             class="w-100 d-block"
             src="${url}"
             alt="Slide Image"
+            style="object-fit: cover; height: 600px; filter: blur(12px);"
           />
+          
+          <img
+            class="w-100 d-block"
+            src="${url}"
+            alt="Slide Image"
+            style="height: 580px; object-fit: contain; position: absolute; top: 10px"
+          />
+          </div>
         </div>`
       );
 
@@ -141,9 +150,12 @@ let updatePost = () => {
     });
 
     $("#post-title").text(post.title);
-    $("#post-author").text(post.author);
+    if (!post.author) {
+      $("#post-author-and-date").text(post.date);
+    } else {
+      $("#post-author-and-date").text(`By ${post.author}\t|\t${post.date}`);
+    }
     $("#post-content").text(post.content);
-    $("#post-date").text(post.date);
   });
 };
 
