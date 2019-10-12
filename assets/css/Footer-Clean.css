@@ -129,8 +129,8 @@ img, svg {
 }
 
 .team-photo {
-  width: 160px;
-  /*max-width: 160px;*/
+  width: 100%;
+  max-width: 160px;
   margin-bottom: 20px;
 }
 
@@ -182,7 +182,9 @@ col-12 {
   margin-bottom: 20px;
 }
 
-.col-12 {
-  text-align: center;
+@media (max-width: 575px) {
+  .team-member {
+    text-align: center;
+  }
 }
 
