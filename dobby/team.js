@@ -95,8 +95,7 @@ let addAlumni = (row, member) => {
   );
 };
 
-// add member
-
+// update Team
 let updateTeam = () => {
   readSheet("1SKorZHjK71eDo45vy1VjTgnaGVxjVOea58bMrwClb3w").then(sheets => {
     let prevColor = "dark";
