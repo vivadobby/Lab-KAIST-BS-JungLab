@@ -8,6 +8,11 @@
     version: dobby.dev.0.1
 */
 
+$("#btn-refresh").click(() => {
+    localStorage.clear();
+    location.reload();
+})
+
 /**************************************************/
 // Sheet
 
@@ -49,10 +54,6 @@ const readSheet = async sheetId => {
   return sheets;
 };
 
-let saveSheet = () => {
-  readSheet("1SKorZHjK71eDo45vy1VjTgnaGVxjVOea58bMrwClb3w");
-};
-
 /**************************************************/
 // Updates
 
@@ -60,6 +61,8 @@ let saveSheet = () => {
 let updateDataset = () => {
   readSheet("1SKorZHjK71eDo45vy1VjTgnaGVxjVOea58bMrwClb3w").then(sheets => {
     const dataset = sheets.Dataset;
+      
+    $("#dataset").html("");
     dataset.forEach(data => {
       $("#dataset").append(
         `<div class="col-sm-6 col-lg-4 col-dataset">
@@ -83,6 +86,8 @@ let updateDataset = () => {
 let updateNews = () => {
   readSheet("1SKorZHjK71eDo45vy1VjTgnaGVxjVOea58bMrwClb3w").then(sheets => {
     const news = sheets.News;
+      
+    $("#news").html("");
     news.forEach((post, index) => {
       images = post.image.split("\n");
 
@@ -126,6 +131,8 @@ let updatePost = () => {
     console.log(post);
 
     const images = post.image.split("\n");
+      $("#post-images").html("");
+      $("#post-indicator").html("");
     images.forEach((url, index) => {
       $("#post-images").append(
         `<div class="${index === 0 ? "carousel-item active" : "carousel-item"}">
@@ -167,6 +174,8 @@ let updatePost = () => {
 let updatePublications = () => {
   readSheet("1SKorZHjK71eDo45vy1VjTgnaGVxjVOea58bMrwClb3w").then(sheets => {
     const publications = sheets.Publications;
+      
+      $("#publications").html("");
     publications.forEach(publication => {
       $("#publications").append(
         `<div
@@ -287,6 +296,8 @@ let updateTeam = () => {
     let prevColor = "dark";
     let prevCategory = null;
     let row = null;
+      
+      $("#team").html("");
     sheets.Team.forEach(member => {
       // new category
       if (member.category !== prevCategory) {

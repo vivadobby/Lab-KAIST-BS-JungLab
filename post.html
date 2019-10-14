@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Blog Post - JungLab</title>
+    <title>Post - JungLab</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -70,7 +70,29 @@
       <section class="clean-block clean-post dark">
         <div class="container">
           <div class="carousel slide" data-ride="carousel" id="carousel-1">
-            <div class="carousel-inner" role="listbox" id="post-images"></div>
+            <div class="carousel-inner" role="listbox" id="post-images">
+              <div class="carousel-item active">
+                <img
+                  class="w-100 d-block"
+                  src="assets/img/scenery/image1.jpg"
+                  alt="Slide Image"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="w-100 d-block"
+                  src="assets/img/scenery/image4.jpg"
+                  alt="Slide Image"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="w-100 d-block"
+                  src="assets/img/scenery/image6.jpg"
+                  alt="Slide Image"
+                />
+              </div>
+            </div>
             <div>
               <a
                 class="carousel-control-prev"
@@ -88,15 +110,31 @@
                 ><span class="sr-only">Next</span></a
               >
             </div>
-            <ol class="carousel-indicators" id="post-indicator"></ol>
+            <ol class="carousel-indicators" id="post-indicator">
+              <li
+                data-target="#carousel-1"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#carousel-1" data-slide-to="1"></li>
+              <li data-target="#carousel-1" data-slide-to="2"></li>
+            </ol>
           </div>
           <div class="block-content">
             <div class="post-body">
-              <h3 id="post-title"></h3>
+              <h3 id="post-title">Title</h3>
               <div class="post-info">
-                <span id="post-author-and-date"></span>
+                <span id="post-author-and-date">By John Smith</span>
               </div>
-              <p id="post-content"></p>
+              <p id="post-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                quam urna, dignissim nec auctor in, mattis vitae leo. Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
+                urna, dignissim nec auctor in, mattis vitae leo. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Nunc quam urna,
+                dignissim nec auctor in, mattis vitae leo. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit.
+              </p>
               <figure class="figure"></figure>
             </div>
           </div>
@@ -113,10 +151,7 @@
             >
               © Copyright 2019 | JungLab
             </p>
-            <p
-              class="text-left"
-              style="/*margin-top: 5%;*/margin-bottom: 5%;font-size: 0.8rem;"
-            >
+            <p class="text-left" style="margin-bottom: 5%;font-size: 0.8rem;">
               JungLab., Room 5213, E6-3 Biological Science Building,<br />KAIST,
               291 Daehak-ro, Yuseong-gu, Daejeon 34141, South Korea<br />
             </p>
@@ -131,7 +166,15 @@
                 style="color: rgb(171,211,255);"
                 >Dobbies</a
               >
-              | Edit Content
+              |
+              <a
+                href="https://docs.google.com/spreadsheets/u/2/d/1SKorZHjK71eDo45vy1VjTgnaGVxjVOea58bMrwClb3w/edit#gid=1230884416"
+                style="color: rgb(171,211,255);"
+                >Edit Content</a
+              >&nbsp;|&nbsp;
+              <a id="btn-refresh" href="#" style="color: rgb(171,211,255);"
+                >Refresh</a
+              >
             </p>
           </div>
         </div>
@@ -142,10 +185,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/dobby.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
-
-    <script src="dobby.js"></script>
     <script>
       updatePost();
     </script>

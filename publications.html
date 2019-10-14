@@ -69,10 +69,23 @@
     </nav>
     <main class="page faq-page">
       <section class="clean-block clean-faq dark">
-        <div class="container" id="publications">
+        <div class="container">
           <div class="block-heading">
             <h2 class="text-info">Publications</h2>
             <p>Meet our fabulous publications!</p>
+          </div>
+          <div id="publications">
+            <div
+              class="block-content"
+              style="padding-top: 20px;padding-bottom: 20px;margin-bottom: 20px;"
+            >
+              <div class="faq-item">
+                <div class="answer">
+                  <h5><strong>Example Publication</strong></h5>
+                  <p><strong>Authors</strong><br /><em>Journal</em></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -87,10 +100,7 @@
             >
               © Copyright 2019 | JungLab
             </p>
-            <p
-              class="text-left"
-              style="/*margin-top: 5%;*/margin-bottom: 5%;font-size: 0.8rem;"
-            >
+            <p class="text-left" style="margin-bottom: 5%;font-size: 0.8rem;">
               JungLab., Room 5213, E6-3 Biological Science Building,<br />KAIST,
               291 Daehak-ro, Yuseong-gu, Daejeon 34141, South Korea<br />
             </p>
@@ -105,7 +115,15 @@
                 style="color: rgb(171,211,255);"
                 >Dobbies</a
               >
-              | Edit Content
+              |
+              <a
+                href="https://docs.google.com/spreadsheets/u/2/d/1SKorZHjK71eDo45vy1VjTgnaGVxjVOea58bMrwClb3w/edit#gid=1230884416"
+                style="color: rgb(171,211,255);"
+                >Edit Content</a
+              >&nbsp;|&nbsp;
+              <a id="btn-refresh" href="#" style="color: rgb(171,211,255);"
+                >Refresh</a
+              >
             </p>
           </div>
         </div>
@@ -116,10 +134,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/dobby.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
-
-    <script src="dobby.js"></script>
     <script>
       updatePublications();
     </script>
